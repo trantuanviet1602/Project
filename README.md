@@ -45,5 +45,6 @@ Chúng ta sẽ dựa trên cách đặt này để thể hiện các thanh Tetri
  `SDL_Event e`.<br/>
  Theo đó, nếu như bấm RIGHT, các điểm được hiển thị (thanh Tetrimino) sẽ di chuyển sang phải 1 đơn vị, và sang trái 1 đơn vị nếu như bấm LEFT. Nếu như bấm UP, các điểm được hiển thị sẽ thực hiện việc đổi vị trí theo quy luật (thanh Tetrimino sẽ xoay). Cần phải có các điều kiện ràng buộc kiểm tra xem bước đi đó là có thể hay không.<br/>
  d.Hiển thị đồ họa<br/>
- Để thực hiện công việc trên, cần phải làm việc với các thư viện đồ họa. Ngoài các khởi tạo màn hình, bút vẽ, cần phải xây dựng các khối chữ nhật được lấy màu từ ảnh cho trước để hiển thị màu cho các thanh Tetriminos. Để làm được điều đó, để biến thành viên `color` ở cấu trúc `Point` và kiểu mảng 2 chiều `int field[Lines][Cols]` là cần thiết.
+ Để thực hiện công việc trên, cần phải làm việc với các thư viện đồ họa. Ngoài các khởi tạo màn hình, bút vẽ, cần phải xây dựng các khối chữ nhật được lấy màu từ ảnh cho trước để hiển thị màu cho các thanh Tetriminos. Để làm được điều đó, để biến thành viên `color` ở cấu trúc `Point` và kiểu mảng 2 chiều `int field[Lines][Cols]` là cần thiết. <br/>
+ Các khối blocks được lấy từ ảnh bên ngoài trong file `image/blocks.png`. Ứng với mỗi loại thanh Tetrimino, ta lấy một khối blocks màu khác nhau từ ảnh bằng `SDL_RenderCopy(renderer, blocks, &srcR, &destR)`. Trong đó `srcR,destR` là các
 
