@@ -46,5 +46,14 @@ Chúng ta sẽ dựa trên cách đặt này để thể hiện các thanh Tetri
  Theo đó, nếu như bấm RIGHT, các điểm được hiển thị (thanh Tetrimino) sẽ di chuyển sang phải 1 đơn vị, và sang trái 1 đơn vị nếu như bấm LEFT. Nếu như bấm UP, các điểm được hiển thị sẽ thực hiện việc đổi vị trí theo quy luật (thanh Tetrimino sẽ xoay). Cần phải có các điều kiện ràng buộc kiểm tra xem bước đi đó là có thể hay không.<br/>
  d.Hiển thị đồ họa<br/>
  Để thực hiện công việc trên, cần phải làm việc với các thư viện đồ họa. Ngoài các khởi tạo màn hình, bút vẽ, cần phải xây dựng các khối chữ nhật được lấy màu từ ảnh cho trước để hiển thị màu cho các thanh Tetriminos. Để làm được điều đó, để biến thành viên `color` ở cấu trúc `Point` và kiểu mảng 2 chiều `int field[Lines][Cols]` là cần thiết. <br/>
- Các khối blocks được lấy từ ảnh bên ngoài trong file `image/blocks.png`. Ứng với mỗi loại thanh Tetrimino, ta lấy một khối blocks màu khác nhau từ ảnh bằng `SDL_RenderCopy(renderer, blocks, &srcR, &destR)`. Trong đó `srcR,destR` là các
+ Các khối blocks được lấy từ ảnh bên ngoài trong file `image/blocks.png`. Ứng với mỗi loại thanh Tetrimino, ta lấy một khối blocks màu khác nhau từ ảnh bằng `SDL_RenderCopy(renderer, blocks, &srcR, &destR)`. Trong đó `srcR,destR` là các cấu trúc `SDL_Rect` được gán tọa độ phù hợp với tọa độ rect cần lấy ở `blocks`, còn `blocks` là cấu trúc `SDL_Texture` được lấy từ ảnh.<br/>
+ Khi đó, ta có thể xây dụng trò chơi một cách tương đối cơ bản. <br/>
+ Tuy nhiên, nếu chỉ làm ra được như vậy, sẽ không thể tạo ra một trò chơi đúng nghĩa. Chúng ta cần phải tạo ra thêm các chức năng để trò chơi thêm thú vị. <br/>
+ e. Hiển thị thanh Tetrimino kế tiếp.<br/>
+ Nếu như không thực hiện công việc trên, thì thanh Tetrimino hiện tại là thanh đã được tạo ngẫu nhiên. Khi đó nếu như muốn thực hiện việc tạo ra thanh kế tiếp, chỉ cần cho thanh kế tiếp sinh ra ngẫu nhiên, còn thanh hiện tại sẽ nhận các chỉ số của thanh kế tiếp đó. <br/>
+ Để hiển thị thanh kế tiếp cũng không phải quá khó khăn, chỉ cần thực hiện những công việc như ở phần d, và chỉnh sửa vị trí của các khối Rect.<br/>
+ f. Có thể giữ thanh Tetrimino hiện tại và thay bằng một thanh mới (nếu có) hoặc tạo mới thanh Tetrimino. (Hold)<br/>
+ Hiển thị thanh Hold sẽ giống như hiển thị thanh kế tiếp. <br/>
+ Trong khi đó việc thực hiện chức năng Hold sẽ áp dụng cơ chế Swap.<br/>
+ Ta gọi ra một mảng cấu trúc Point `Point temp[4]` và thực hiện việc hoán đổi 2 thanh Tetrimino. Nếu như chưa có thanh Tetrimino nào được giữ thì sẽ thực hiện việc tạo mới.<br/>
 
