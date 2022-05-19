@@ -56,4 +56,18 @@ Chúng ta sẽ dựa trên cách đặt này để thể hiện các thanh Tetri
  Hiển thị thanh Hold sẽ giống như hiển thị thanh kế tiếp. <br/>
  Trong khi đó việc thực hiện chức năng Hold sẽ áp dụng cơ chế Swap.<br/>
  Ta gọi ra một mảng cấu trúc Point `Point temp[4]` và thực hiện việc hoán đổi 2 thanh Tetrimino. Nếu như chưa có thanh Tetrimino nào được giữ thì sẽ thực hiện việc tạo mới.<br/>
+ g. Hiển thị thanh Tetrimino dự đoán vị trí của thanh Tetrimino khi rơi xuống.<br/>
+ Để hiển thị thanh Tetrimino dự đoán thì không khó vì ta chỉ cần hiển thị trên sân chơi như các thanh Tetrimino bình thường.<br/>
+ Cơ chế của thanh Tetrimino dự đoán như sau:<br/>
+ ** Nếu như không di chuyển trái phải, hoặc xoay, thì vị trí khởi tạo của thanh dự đoán sẽ trùng với thanh hiện tại và sẽ rơi xuống cho đến khi không thể rơi được nữa. Nếu như di chuyển trái phải hoặc xoay, ta cần phải khởi tạo lại vị trí của thanh dự đoán và cũng thực hiện như trên.<br/>
+ Để tránh việc thanh dự đoán đè lên thanh hiện tại khi 2 thanh ở cùng vị trí, thì ta thực hiện việc render thanh dự đoán trước, sau đó sẽ thực hiện render thanh hiện tại. Làm như vậy thì thanh hiện tại sẽ đè lên thanh dự đoán khi cùng vị trí.<br/>
+ h. Cơ chế rơi của thanh Tetrimino.<br/>
+ Trong trò chơi có sử dụng biến `unsigned int delay` và 2 biến `Uint32 startTime, currentTime`. Cho `startTime` nhận giá trị của `SDL_GetTicks()`. `currentTime` sẽ thay đổi dựa trên điều kiện `if startTime - currentTime > delay`. Khi đó sẽ thực hiện việc rơi cho thanh Tetrimino. Sau đó cho `startTime = currentTime` là hoàn thành.
+ Chú ý rằng delay có thể thay đổi, và khi thay đổi delay thì tốc độ rơi của thanh Tetrimino sẽ thay đổi. Do đó để thực hiện việc thay đổi level cho trò chơi, ta chỉ cần thay đổi giá trị của `delay` tại một ngưỡng nào đó.<br/>
+ i. Cơ chế điểm và level của trò chơi.<br/>
+ Như đã nói ở trên, có thể thay đổi `delay` tùy ý. Do đó ta cần một cách để thay đổi `delay` dựa trên điều kiện. <br/>
+ Ta tạo ra một biến `int score` để nhận điểm từ trò chơi. `score` sẽ tăng lên nếu như liên kết đủ một hàng hoặc sinh ra một thanh Tetrimino mới. Khi đạt đủ điểm, độ khó trò chơi sẽ tăng lên, và khi đó tốc độ rơi sẽ nhanh hơn. <br/>
+ Để người chơi có thể thấy được điểm của mình là bao nhiêu, ta cần phải sử dụng thư viện `SDL_ttf.h`.<br/>
+ Để có thể ghi chép trên màn hình trò chơi, cũng cần phải sử dụng các cấu trúc gần giống như thể hiện trò chơi. <br/>
+ Tuy nhiên, chỉ cần khi sinh ra thanh Tetrimino mới, là cần phải thay đổi số liệu, vì khác với thể hiện trò chơi, thể hiện điểm không liên tục như vậy. Do đó chỉ cần thay đổi số liệu và thực hiện ghi ra điểm/độ khó khi tạo ra thanh Tetrimino mới (Vào thời điểm tạo ra thanh Tetrimino mới cũng là lúc tính điểm từ `unite`).
 
