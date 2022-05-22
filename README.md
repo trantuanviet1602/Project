@@ -96,3 +96,13 @@ Bản thân trò chơi không sử dụng chung một bộ điều khiển đồ
 Về lý thuyết, vòng lặp có thể là vô hạn. Do đó phải đặt trong một vòng lặp vô hạn.<br/> 
 Cần có các điều kiện để đảm bảo rằng trò chơi vẫn có thể thoát được vòng lặp trong các điều kiện khác nhau, ví dụ như khi người chơi bấm chuột vào Close, hoặc là khi người chơi không muốn chơi tiếp.<br/> 
 
+### Kết luận
+Tetris là tựa game đã ra mắt từ lâu về trước, nhưng sức hút của trò chơi vẫn kéo dài đến ngày nay. Để làm ra được trò chơi đã khó, để hoàn thiện trò chơi sao cho người chơi có những trải nghiệm chân thực nhất lại càng khó hơn.<br/> 
+Bản thân em chưa thực sự hài lòng về trò chơi. Trò chơi vẫn có thể có một số lỗi, cách sắp xếp có thể chưa thực sự tối ưu. Bản thân trò chơi có thể được cải tiến để cho ra sản phẩm càng ngày càng giống với các trò chơi trên thị trường.<br/> 
+Qua việc thực hiện dự án bản thân em cũng đã học được nhiều về chương trình. Từ cách đặt tên biến, cách sắp xếp các yếu tố trong một trò chơi vào một lớp, nhóm cụ thể, cho đến làm việc với các mảng trong trò chơi và , em đã có được một số kỹ năng cơ bản.<br/> 
+Trò chơi vẫn có thể cải thiện trong tương lai. Một số định hướng sắp tới cho trò chơi cụ thể:<br/> 
+  * Tạo ra Settings trong trò chơi và lưu lại các thông tin hiệu chỉnh trong About, để người chơi có thể hiệu chỉnh một lần và không cần hiệu chỉnh lại. <br/> 
+  * Các chế độ chơi mới có thể được tạo ra như chơi 2 người, chơi với máy, chơi đối kháng,...<br/> 
+  * Sử dụng chung một bộ xử lý đồ họa để tránh việc phải tạo lại khi chuyển sang Node mới.<br/> 
+  * Hiệu chỉnh về cơ chế rơi và tạo mới thanh Tetrimino sao cho mượt mà hơn.<br/> 
+Trong bài báo cáo của em có thể có những sai sót, rất mong được các thầy cô đánh giá, góp ý để bản thân em có thể hoàn thiện hơn trong tương lai.
