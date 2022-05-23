@@ -4,11 +4,12 @@ MSV: 21020421, lớp học phần INT2215 1. <br />
 ## Dự án lập trình
 **Tên trò chơi: Tetris** (Game xếp hình cổ điển) <br />
 ### Về cách cài đặt, hướng dẫn để có thể chạy chương trình <br />
+(Trò chơi được làm bằng IDE Code::Blocks.) <br />
 1. Clone toàn bộ source code về máy.<br />
 Fork repository và sử dụng câu lệnh git clone https://github.com/[YOUR_USERNAME]/Project.git <br />
 2. Cài đặt thư viện đồ họa SDL, thư viện SDL_image, SDL_ttf, SDL_image, SDL_mixer.<br />
 Hướng dẫn cài đặt các thư viện SDL có thể tham khảo qua video https://www.youtube.com/watch?v=DoRyZaFZekQ .Cài đặt các thư viện còn lại cũng sẽ tương tự.<br />
-3. Tận hưởng trò chơi.<br />
+3. Tận hưởng trò chơi bằng cách chạy file Test.cbp và chạy chương trình. <br />
 Link YouTube: https://www.youtube.com/watch?v=10DYdEo9kqY <br />.
 ### Mô tả về trò chơi và các ý tưởng chính <br />
 1. Mô tả <br />
