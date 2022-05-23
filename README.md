@@ -5,10 +5,26 @@ MSV: 21020421, lớp học phần INT2215 1. <br />
 **Tên trò chơi: Tetris** (Game xếp hình cổ điển) <br />
 ### Về cách cài đặt, hướng dẫn để có thể chạy chương trình <br />
 (Trò chơi được làm bằng IDE Code::Blocks.) <br />
-1. Clone toàn bộ source code về máy.<br />
-Fork repository và sử dụng câu lệnh git clone https://github.com/[YOUR_USERNAME]/Project.git <br />
-2. Cài đặt thư viện đồ họa SDL, thư viện SDL_image, SDL_ttf, SDL_image, SDL_mixer.<br />
-Hướng dẫn cài đặt các thư viện SDL có thể tham khảo qua video https://www.youtube.com/watch?v=DoRyZaFZekQ .Cài đặt các thư viện còn lại cũng sẽ tương tự.<br />
+1. Cài đặt Code::Blocks.<br />
+Vào đường dẫn tải Code::Blocks về máy http://www.codeblocks.org/downloads/binaries/ <br/>
+2. Clone toàn bộ source code về máy.<br />
+Fork repository và sử dụng câu lệnh git clone https://github.com/[YOUR_USERNAME]/Project.git , hoặc tải về toàn bộ các file.<br />
+3. Cài đặt thư viện đồ họa SDL, thư viện SDL_image, SDL_ttf, SDL_image, SDL_mixer.<br />
+Đường dẫn: https://drive.google.com/drive/folders/1_gc-zfcQ-qUeKL8b_tOK0htHrQXtj3eq?usp=sharing . Trong đó bao gồm toàn bộ các file .rar về thư viện SDL. <br/>
+Giải nén toàn bộ 4 file trên và thực hiện các bước sau: <br/>
+* Vào Code::Blocks, nhấp chuột vào Settings -> Compiler.
+* Vào Linker settings, ở ô Other linker options, viết thêm các dòng sau: `-lSDL2main -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf` <br/>
+![image](https://user-images.githubusercontent.com/100114945/169832518-4af879ed-f66f-449a-a126-bfa6e3f427a0.png)
+
+* Vào Search directories, ở ô Compiler, chọn Add, tiếp theo lấy đường dẫn của các file include bên trong các file .rar đã tải về và giải nén. Chọn từ file `x86_64...` nếu máy tính là 64bit, và chọn từ file `i686...` nếu là 32bit. Ví dụ: <br/>
+![image](https://user-images.githubusercontent.com/100114945/169832306-1c20d2fc-3901-441e-81d1-65b786f7cf45.png)
+
+* Vào Linker, chọn Add, làm tương tự như trên, chỉ khác là lấy đường dẫn của các file lib. <br/>
+![image](https://user-images.githubusercontent.com/100114945/169832843-fbb07126-821a-4f23-a03d-ba099a006e76.png)
+
+* Copy toàn bộ file bên trong mỗi file đồ họa ở thư mục `bin` vào cùng thư mục với thư mục chứa toàn bộ code đã lấy từ GitHub về máy.<br />
+
+
 3. Tận hưởng trò chơi bằng cách chạy file Test.cbp và chạy chương trình. <br />
 Link YouTube: https://www.youtube.com/watch?v=10DYdEo9kqY <br />.
 ### Mô tả về trò chơi và các ý tưởng chính <br />
