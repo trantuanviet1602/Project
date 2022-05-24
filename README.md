@@ -26,6 +26,15 @@ Giải nén toàn bộ 4 file trên và thực hiện các bước sau: <br/>
 
 
 3. Tận hưởng trò chơi bằng cách chạy file Test.cbp và chạy chương trình. <br />
+
+Cách chơi:<br />
+Bấm các phím mũi tên để thực hiện di chuyển.<br />
+Bấm P để tạm dừng trò chơi<br />
+Bấm O để giữ thanh Tetrimino lại và thay thế bởi một thanh khác<br />
+Bấm I để cho thanh Tetrimino rơi xuống ngay lập tức<br />
+Trong chế độ Blindfolded, bấm U để hiển thị các thanh Tetrimino đã rơi xuông.<br />
+
+
 Link YouTube: https://www.youtube.com/watch?v=10DYdEo9kqY <br />.
 ### Mô tả về trò chơi và các ý tưởng chính <br />
 1. Mô tả <br />
